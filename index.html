@@ -8,21 +8,23 @@
 <body>
     <H1>MON TITRE</H1>
     <script>
-        //const canDrive = function(age, pays){
-    if(true){
-        function canDrive(age,pays){
-            if(
-                (age >= 18 && pays === 'FR') || 
-                (age >= 16 && pays === 'US')
-            )   {
-                    return true
-                }
-                return false
-    }
-    console.log(canDrive(17,"US"))
-    }
+     let util_number = prompt("Tapez un nombre entre 0 et 10?")
+     if (util_number > 10 || util_number <0){
+        
+        console.log("Ce nombre n'est pas entre 0 et 10")
+        
+        }else {
+
+            for(let i = util_number; i >= 0 ; i-- ) //for( pour i=valeur; tant que i...; affichage ou opération)
+            {
+            console.log(i)
+            }
+        }
+     
+
     </script>
+
 
     
 </body>
-</html>
+</html
