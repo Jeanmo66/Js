@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+
+			        const moyenne = function(notes){
+			        let sum = 0
+			        for (let note of notes){
+			        sum = sum + note
+
+			       }
+			       return sum /notes.length
+			    }
+
+			/* ------------------------------------------------------------------------------- */
+			        class Student {
+			            ecole = 'Jules Ferry'
+			            #notes = []
+
+			            static moyenne = 10
+
+			            constructor (firstname, lastname) {
+			                this.firstname = firstname
+			                this.lastname = lastname
+			            }
+
+			            set notes (v) {
+			                if (Array.isArray(v)){
+			                    this.#notes = v
+			                }
+			            }
+
+			            get name () {
+			                return `${this.firstname}  ${this.lastname}`
+			            }
+
+			            /* setNotes (notes) {
+			                this.notes = notes
+			            }
+			            */
+
+			            canPass (){
+			                return moyenne(this.#notes) >= Student.moyenne
+			            }
+
+
+                    }
+
+                    class SuperStudent extends Student {
+
+                        #notes =[]
+
+                        constructor (firstname, lastname, notes) {
+
+                            super(firstname, lastname)
+                            this.#notes = notes
+                        }
+
+                        getName () {
+                            return 'Super' + super.name
+            
+                        }
+
+                        canPass(){
+                            return super.canPass()
+                        }
+
+                    }
+
+			    //const student1 = new Student('John', 'Doe')
+			    //const student2 = new Student('Jane', 'Doe')
+                const student10 = new SuperStudent('John10','Doe10','[8, 11, 17]')
+			    // student1.notes = [19]
+			    // student2.notes = [11 ,13, 10]
+                // student1.age = 18
+                // student2.age = 16
+
+
+
+			    // console.log(student1.name)
+			    // console.log(student2.name)
+			    // console.log(student1.canPass(), student2.canPass())
+		</script>
+	</body>
+</html>
