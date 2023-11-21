@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Book {
+            
+            pages = [];
+            #page = 1
+
+            constructor (title, pages){
+                this.title = title
+                this.pages = pages
+               
+            }
+
+            get page () {
+                return this.#page
+            }
+            
+            nextpage () {
+                if( this.#page < this.pages){
+                    this.#page ++
+                }
+            }
+            close () {
+                this.#page = 1
+            }
+        }
+
+        class Library {
+
+            #bookCat =[]
+
+            addBook (b) {
+                this.#bookCat.push(b)
+                
+            }
+        
+            addBooks (bks) {
+                for( let b of bks){
+                    this.addBook(b)
+                }
+            }
+
+            findBksByLetter (letter) {
+                const found = []
+                /* for( let book of this.#bookCat){
+                    found.filter(letter)
+                    if (book.title[0].toLowerCase() === letter.toLowerCase()){
+                    found.push(book)
+                    }   
+                } 
+                return found
+               
+            }*/
+             return this.#bookCat.filter((book) => book.title[0].toLowerCase() === letter.toLowerCase() )
+            }
+        }
+
+        const book1 = new Book('Seigneur des Anes', 100)
+
+        console.log(book1)
+        console.log(book1.page)
+        book1.nextpage()
+        console.log(book1.page)
+        book1.close()
+        console.log(book1.page)
+
+        const l = new Library()
+        console.log(l)
+
+        l.addBook(book1)
+    
+        l.addBooks([
+            new Book('Ready player one', 100),
+            new Book('Oui-oui', 10),
+            new Book('Sillage', 50),
+        ])
+        console.log(l.findBksByLetter('S'))
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Error Js</title>
+	</head>
+	<body>
+		<script>
+			/*****************************************Class********************************************************/
+			class Rectangle {
+				constructor(length, width) {
+					if (length <= 0 || width <= 0) {
+						throw new Error(
+							'La longueur ou la largeur ne peuvent être égales à 0',
+						);
+					}
+					this.length = length;
+					this.width = width;
+				}
+
+				get perimeter() {
+					return (this.length + this.width) * 2;
+				}
+				get isValid() {
+					return this.length > 0 && this.width > 0;
+				}
+				isBiggerThan(shape) {
+					return this.perimeter > shape.perimeter;
+				}
+			}
+			/*************************************Class************************************************************/
+			class Square extends Rectangle {
+				constructor(width) {
+					super(width, width);
+				}
+			}
+
+			/***************************************Class********************************************************/ 
+			class PromptError extends Error {
+
+
+
+			}
+			/*****************************************functions*************************************************/
+			function promptRectangle() {
+				const width = parseInt(prompt(' Largeur '), 10);
+				const lenght = parseInt(prompt(' Longueur '), 10);
+				const r = new Rectangle(lenght, width);
+				return r;
+			}
+
+			try {
+				promptRectangle();
+			
+			} catch (e) {
+				
+				if (e instanceof PromptError) {
+					console.log('PromptError')
+				} else {
+					console.log('Erreur classique');
+				}
+			}
+
+			// const r2 = new Rectangle(-10, 20);
+
+			//console.log (' Hello !')
+		</script>
+	</body>
+</html>

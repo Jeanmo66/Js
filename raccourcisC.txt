@@ -1,0 +1,9 @@
+alt+w  => fermer panneaux de gauche
+ctrl+d => etendre la selection
+ctrl+shift+d => etendre la selection a toutes les occurences
+ctrl+shift+o => ouvrir emplacement fichier dans explorateur
+ctrl+e => voir les editeurs recemments ouverts
+ctrl+r => recherche symboles editeur
+ctrl+n => creer nouveau fichier
+ctrl+l => formatter document
+ctrl+t => ouvrir terminal 
