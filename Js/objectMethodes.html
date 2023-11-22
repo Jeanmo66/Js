@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methodes</title>
+</head>
+<body>
+<script>
+
+    /*Object.assign()*/
+    const target = { a: 1, b: 2 };
+    const source = { b: 4, c: 5 };
+
+    const returnedTarget = Object.assign(target, source);
+    console.log(target);
+    console.log(returnedTarget === target);
+
+    /*Object.assign()*/
+
+    class A {
+
+        constructor () {
+            this.field = 3
+        }
+
+        set field (v) {
+            console.log('Hello')
+        }
+    }
+
+
+    function hello () {
+        console.log(this)
+    }
+     const hello2 = hello.bind(3)
+</script>
+</body>
+</html>

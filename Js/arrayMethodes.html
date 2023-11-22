@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodes Array Usuelles</title>
+</head>
+<body>
+    <Script>
+        const tabNumbers = [12, 5, 8, 130, 44]
+        const array1 = ['a', 'b', 'c'];
+        const array2 = ['d', 'e', 'f'];
+        const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+
+        
+        /* Array.prototype.at()*/
+        //console.log(tabNumbers[2])
+        //console.log(`${tabNumbers.at(-2)}`)// 130
+        //console.log(tabNumbers.at(-1))
+        
+        /*Array.prototype.concat()*/
+        const array12 = array1.concat(array2)
+        //console.log(array12)
+
+        /*Array.prototype.fill()*/
+        console.log( tabNumbers.fill(150,3,4))
+
+        /*Array.prototype.filter()*/
+        const result = words.filter((word) => word.length > 6)
+        
+        //console.log(result)
+
+        /*Array.prototype.find()*/
+        //console.log(tabNumbers)
+        const found = tabNumbers.find((element) => element >100 )
+        const found1 = tabNumbers.findIndex((element) => element >100 )
+        //console.log(found)
+        //console.log(found1)
+
+        /*Array.prototype.forEach()*/
+
+        tabNumbers.forEach((i, e) => console.log(i, e))
+
+        /*Array.from()*/
+
+        console.log(Array.from('hello'))
+
+        test = (x) => x + x  
+        console.log(test(5))
+
+       /*Array.prototype.includes()*/
+
+       console.log(tabNumbers.includes(8))
+
+        /*Array.prototype.map()*/
+        const map1 = tabNumbers.map((x) => x * 2)
+        console.log(map1)
+
+        const persons = [
+            {firstname : 'John', lastname: 'Doe'},
+            {firstname : 'Jane', lastname: 'Doe'},
+            {firstname : 'Marc', lastname: 'Doe'},
+            {firstname : 'Manon', lastname: 'Doe'},
+        ]
+
+        console.log(
+            persons
+            .map((p) => p.firstname + ' ' + p.lastname)
+            .join('\n')
+        )
+
+        /*Array.prototype.reduce()*/
+        const array20 = [ 12, 18, 19]
+
+        console.log(
+            array20.reduce((acc, note) => {return acc + note}, 0)
+        )
+
+
+    </Script>
+</body>
+</html>
