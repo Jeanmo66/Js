@@ -3,5 +3,20 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.ChromeDebuggingAttachment": false,
+		"liveServer.settings.ignoreFiles": [
+
+
+			".vscode/**",
+			"**/*.scss",
+			"**/*.sass",
+			"**/*.ts"
+		],
+		"liveServer.settings.CustomBrowser": null,
+		"livePreview.customExternalBrowser": "Chrome",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		
+	}
 }

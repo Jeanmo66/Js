@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sucres Syntaxiques</title>
+</head>
+<body>
+    <script>
+        let a = null 
+        let b = a ?? 5 /*   a ?? indifing or null alors 5*/
+        a ??= 3     /*   a ??= n a indifing or null alors n*/
+        console.log(a)
+
+        const person = {firstname: 'John', job:{name :'Boulanger'}}
+       
+        console.log(person.job?.name)
+      
+        const array1 = ['a', 'b', 'c']
+    </script>
+</body>
+</html>
