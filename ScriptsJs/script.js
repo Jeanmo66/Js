@@ -13,13 +13,16 @@ console.log(result)
 /** Ecriture fléchée*/
 let sum2 = (a, b) => a + b
 console.log(sum2(35, 25))
-
+// *****BOUCLES**** 
+    // => Tant que la condition est vraie, le code du corps de la boucle est exécuté. 
 i = 3 
 while (i) {
     console.log(i)
     i--
 }
-
+    //Autre façon d'ecrire
 i = 3 
 while (i)  (i--)
 console.log(i)
+
+//?
