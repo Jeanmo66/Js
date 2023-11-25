@@ -7,3 +7,13 @@ ctrl+r => recherche symboles editeur
 ctrl+n => creer nouveau fichier
 ctrl+l => formatter document
 ctrl+t => ouvrir terminal 
+
+/*
+    *showMessage('Anne')
+    ** dprec
+    !hknlm,jl
+    ? jhlkhùknmln,
+    todo:
+    help:
+    ww
+**/
