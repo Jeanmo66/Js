@@ -7,10 +7,15 @@
 	</head>
 	<body>
 		<script>
-			const p = new Promise((resolve, reject) => {
-				resolve(4);
-			});
-
+			// const p = new Promise((resolve, reject) => {
+			// 	reject(4);
+			// });
+			// p.then((n) => {
+			// 	console.log('Le nombre est ', n)
+			// })
+			// p.catch((e) => {
+			// 	console.log('Echec',e)
+			//  })
 
 			function wait (duration) {
 				return new Promise((resolve, reject) => {
@@ -28,7 +33,7 @@
 				})
 			}
 
-			wait(2000)
+			 wait(2000)
 				.then(() => {
 					console.log('Attente 2s')
 					return wait(1000)
@@ -36,7 +41,7 @@
 				.then(() => 
 					console.log('Attente une 1s')
 				)
-				.catch(()=> null)
+			// 	.catch(()=> null)
 			/* p.then(e => {
 				console.log('Le chiffre', e);
 			})
